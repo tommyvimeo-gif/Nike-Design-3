@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nike Style | Just Do It</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">NIKE<span>.</span></a>
+    <nav>
+      <ul>
+        <li><a href="dunks.html">Dunks</a></li>
+        <li><a href="basketball.html">Košarkaške</a></li>
+        <li><a href="majice.html">Majice</a></li>
+        <li><a href="oprema.html">Oprema</a></li>
+        <li><a href="hypebeast.html">Hypebeast</a></li>
+        <li><a href="supreme-stores.html">Supreme Trgovine</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>JUST DO IT</h1>
+    <p>Odkrij legendarne modele – od Dunks do signature superge Luka Dončića, LeBrona in še več. Stil, ki definira ulico in igrišče.</p>
+    <a href="basketball.html" class="btn">Razišči kolekcijo</a>
+  </section>
+
+  <section>
+    <h2 class="section-title">Ikonični modeli</h2>
+    <div class="product-grid">
+      <div class="product-card" onclick="openZoom(this)">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&h=600&fit=crop" alt="Nike Dunk" class="product-img">
+        <div class="product-info">
+          <h3>Nike Dunk Low</h3>
+          <div class="price">od 115 €</div>
+          <p>Klasični basketball silhuet, ki je osvojil ulico.</p>
+        </div>
+      </div>
+      <div class="product-card" onclick="openZoom(this)">
+        <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=600&h=600&fit=crop" alt="Air Jordan" class="product-img">
+        <div class="product-info">
+          <h3>Air Jordan / Luka</h3>
+          <div class="price">od 130 €</div>
+          <p>Signature linija Luke Dončića – Luka 4 & Luka 5.</p>
+        </div>
+      </div>
+      <div class="product-card" onclick="openZoom(this)">
+        <img src="https://images.unsplash.com/photo-1595950653106-6c9eed38d1d8?w=600&h=600&fit=crop" alt="Air Max" class="product-img">
+        <div class="product-info">
+          <h3>Air Max</h3>
+          <div class="price">od 140 €</div>
+          <p>Vidna Air blazina – ikona udobja in stila.</p>
+        </div>
+      </div>
+      <div class="product-card" onclick="openZoom(this)">
+        <img src="https://images.unsplash.com/photo-1556906781-9a412961c28c?w=600&h=600&fit=crop" alt="Basketball" class="product-img">
+        <div class="product-info">
+          <h3>Signature Košarkaške</h3>
+          <div class="price">od 120 €</div>
+          <p>LeBron, KD, Giannis Freak in več.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #f5f5f5; max-width: 100%;">
+    <div style="max-width: 1400px; margin: 0 auto; padding: 0 2rem;">
+      <h2 class="section-title">Zakaj Nike?</h2>
+      <div class="feature-list">
+        <div class="feature-item">
+          <h3>Inovacija</h3>
+          <p>Zoom Air, Cushlon, IsoPlate – tehnologija za najboljše igralce.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Kultura</h3>
+          <p>Od košarke do Hypebeast – Nike definira streetwear.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Signature</h3>
+          <p>Luka Dončić, LeBron James, Kevin Durant in legende.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Nike Style Demo – Ustvarjeno za predogled</p>
+    <p style="margin-top: 1rem;">
+      <a href="dunks.html">Dunks</a>
+      <a href="basketball.html">Košarkaške</a>
+      <a href="majice.html">Majice</a>
+      <a href="hypebeast.html">Hypebeast</a>
+      <a href="supreme-stores.html">Supreme</a>
+    </p>
+    <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.7;">To je demo stran v stilu Nike. Slike so iz Unsplash (stock). Prave Nike slike so zaščitene z avtorskimi pravicami.</p>
+  </footer>
+
+  <div class="modal" id="zoomModal" onclick="closeZoom()">
+    <span class="modal-close">&times;</span>
+    <img id="zoomImg" src="" alt="Zoom">
+  </div>
+
+  <script>
+    function openZoom(card) {
+      const img = card.querySelector('img');
+      document.getElementById('zoomImg').src = img.src;
+      document.getElementById('zoomModal').classList.add('active');
+    }
+    function closeZoom() {
+      document.getElementById('zoomModal').classList.remove('active');
+    }
+  </script>
+</body>
+</html>

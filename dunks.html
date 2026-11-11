@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nike Dunks | Nike Style</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">NIKE<span>.</span></a>
+    <nav>
+      <ul>
+        <li><a href="dunks.html">Dunks</a></li>
+        <li><a href="basketball.html">Košarkaške</a></li>
+        <li><a href="majice.html">Majice</a></li>
+        <li><a href="oprema.html">Oprema</a></li>
+        <li><a href="hypebeast.html">Hypebeast</a></li>
+        <li><a href="supreme-stores.html">Supreme Trgovine</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="category-banner">
+    <h1>Nike Dunk</h1>
+    <p>Od košarkarskega klasika do ulične ikone</p>
+  </div>
+
+  <section>
+    <h2 class="section-title">Popularni modeli Dunk</h2>
+    <p style="margin-bottom: 2rem; max-width: 800px;">Nike Dunk je bil prvič predstavljen leta 1985 kot košarkarska superge za univerzitetne ekipe ("Be True to Your School"). Kasneje je postal legenda v skateboard kulturi (SB Dunk) in danes prevladuje v streetwearju. Na voljo v Low, Mid in High različicah.</p>
+
+    <div class="product-grid">
+      <div class="product-card" onclick="openZoom(this)">
+        <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=600&h=600&fit=crop" alt="Dunk Low Panda" class="product-img">
+        <div class="product-info">
+          <h3>Dunk Low "Panda"</h3>
+          <div class="price">115 €</div>
+          <p>Črno-bela ikona. Najbolj vsestranski model vseh časov. Usnje, klasični silhuet.</p>
+        </div>
+      </div>
+      <div class="product-card" onclick="openZoom(this)">
+        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&h=600&fit=crop" alt="Dunk High" class="product-img">
+        <div class="product-info">
+          <h3>Dunk High Retro</h3>
+          <div class="price">130 €</div>
+          <p>Visok model z originalnim basketball vibeom. Odličen za zimske kombinacije.</p>
+        </div>
+      </div>
+      <div class="product-card" onclick="openZoom(this)">
+        <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=600&h=600&fit=crop" alt="SB Dunk" class="product-img">
+        <div class="product-info">
+          <h3>SB Dunk Low Pro</h3>
+          <div class="price">125 €</div>
+          <p>Skateboard verzija z Zoom Air blazino in debelejšim jezičkom. Kultni model.</p>
+        </div>
+      </div>
+      <div class="product-card" onclick="openZoom(this)">
+        <img src="https://images.unsplash.com/photo-1595950653106-6c9eed38d1d8?w=600&h=600&fit=crop" alt="Dunk Colorway" class="product-img">
+        <div class="product-info">
+          <h3>Dunk Low University</h3>
+          <div class="price">115 €</div>
+          <p>Barvne različice po univerzah – Michigan, Kentucky, Georgetown in druge.</p>
+        </div>
+      </div>
+      <div class="product-card" onclick="openZoom(this)">
+        <img src="https://images.unsplash.com/photo-1515955656352-a1fa3ffcd17c?w=600&h=600&fit=crop" alt="Dunk Collab" class="product-img">
+        <div class="product-info">
+          <h3>SB Dunk Collabs</h3>
+          <div class="price">od 140 €</div>
+          <p>Sodelovanja: Ben & Jerry's, Grateful Dead, Travis Scott, Off-White...</p>
+        </div>
+      </div>
+      <div class="product-card" onclick="openZoom(this)">
+        <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=600&h=600&fit=crop" alt="Dunk Premium" class="product-img">
+        <div class="product-info">
+          <h3>Dunk Low Premium</h3>
+          <div class="price">140 €</div>
+          <p>Višja kakovost materialov – semiš, patent usnje, posebne barvne kombinacije.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #111; color: white; max-width: 100%;">
+    <div style="max-width: 1400px; margin: 0 auto; padding: 0 2rem;">
+      <h2 class="section-title" style="color: white;">Zgodovina na kratko</h2>
+      <ul style="list-style: none; line-height: 2;">
+        <li><strong>1985</strong> – Prva izdaja "Be True to Your School"</li>
+        <li><strong>2002</strong> – Rojstvo SB Dunk za skateboarderje</li>
+        <li><strong>2010s</strong> – Preporod v streetwear kulturi</li>
+        <li><strong>2020+</strong> – Masovna popularnost, Panda postane must-have</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Nike Style Demo</p>
+    <p style="margin-top: 1rem;"><a href="index.html">Domov</a> <a href="basketball.html">Košarkaške</a></p>
+  </footer>
+
+  <div class="modal" id="zoomModal" onclick="closeZoom()">
+    <span class="modal-close">&times;</span>
+    <img id="zoomImg" src="" alt="Zoom">
+  </div>
+  <script>
+    function openZoom(card) {
+      const img = card.querySelector('img');
+      document.getElementById('zoomImg').src = img.src;
+      document.getElementById('zoomModal').classList.add('active');
+    }
+    function closeZoom() {
+      document.getElementById('zoomModal').classList.remove('active');
+    }
+  </script>
+</body>
+</html>

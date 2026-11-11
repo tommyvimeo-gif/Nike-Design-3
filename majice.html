@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nike Majice | Nike Style</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">NIKE<span>.</span></a>
+    <nav>
+      <ul>
+        <li><a href="dunks.html">Dunks</a></li>
+        <li><a href="basketball.html">Košarkaške</a></li>
+        <li><a href="majice.html">Majice</a></li>
+        <li><a href="oprema.html">Oprema</a></li>
+        <li><a href="hypebeast.html">Hypebeast</a></li>
+        <li><a href="supreme-stores.html">Supreme Trgovine</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="category-banner">
+    <h1>Nike Majice</h1>
+    <p>Klikni na sliko za povečavo (Zoom)</p>
+  </div>
+
+  <section>
+    <h2 class="section-title">Ikonične majice</h2>
+    <div class="product-grid">
+      <div class="product-card" onclick="openZoom(this)">
+        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=600&fit=crop" alt="Nike Tee" class="product-img">
+        <div class="product-info">
+          <h3>Nike Sportswear Tee</h3>
+          <div class="price">35 €</div>
+          <p>Klasična bombažna majica z velikim Swoosh logotipom. Everyday essential.</p>
+        </div>
+      </div>
+      <div class="product-card" onclick="openZoom(this)">
+        <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&h=600&fit=crop" alt="Jordan Tee" class="product-img">
+        <div class="product-info">
+          <h3>Jordan Brand Tee</h3>
+          <div class="price">45 €</div>
+          <p>Jumpman grafika, premium fit. Idealno z Air Jordan superge.</p>
+        </div>
+      </div>
+      <div class="product-card" onclick="openZoom(this)">
+        <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&h=600&fit=crop" alt="Dri-FIT" class="product-img">
+        <div class="product-info">
+          <h3>Nike Dri-FIT</h3>
+          <div class="price">40 €</div>
+          <p>Tehnologija odvajanja vlage. Za trening in vsakdanje nošenje.</p>
+        </div>
+      </div>
+      <div class="product-card" onclick="openZoom(this)">
+        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=600&h=600&fit=crop" alt="Graphic Tee" class="product-img">
+        <div class="product-info">
+          <h3>Graphic / Collaboration Tee</h3>
+          <div class="price">50–80 €</div>
+          <p>Sodelovanja z umetniki, športniki in blagovnimi znamkami. Limited drops.</p>
+        </div>
+      </div>
+      <div class="product-card" onclick="openZoom(this)">
+        <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&h=600&fit=crop" alt="Long Sleeve" class="product-img">
+        <div class="product-info">
+          <h3>Long Sleeve / Thermal</h3>
+          <div class="price">45 €</div>
+          <p>Za hladnejše dni. Layering essential v streetwear lookih.</p>
+        </div>
+      </div>
+      <div class="product-card" onclick="openZoom(this)">
+        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&h=600&fit=crop" alt="Basketball Tee" class="product-img">
+        <div class="product-info">
+          <h3>Basketball Heritage Tee</h3>
+          <div class="price">40 €</div>
+          <p>Retro dizajni, ekipni logotipi, Luka / LeBron / Jordan motivacija.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Nike Style Demo – Klikni sliko za Zoom</p>
+    <p style="margin-top: 1rem;"><a href="index.html">Domov</a></p>
+  </footer>
+
+  <div class="modal" id="zoomModal" onclick="closeZoom()">
+    <span class="modal-close">&times;</span>
+    <img id="zoomImg" src="" alt="Zoom">
+  </div>
+  <script>
+    function openZoom(card) {
+      const img = card.querySelector('img');
+      document.getElementById('zoomImg').src = img.src;
+      document.getElementById('zoomModal').classList.add('active');
+    }
+    function closeZoom() {
+      document.getElementById('zoomModal').classList.remove('active');
+    }
+  </script>
+</body>
+</html>

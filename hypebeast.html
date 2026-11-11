@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hypebeast Culture | Nike Style</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">NIKE<span>.</span></a>
+    <nav>
+      <ul>
+        <li><a href="dunks.html">Dunks</a></li>
+        <li><a href="basketball.html">Košarkaške</a></li>
+        <li><a href="majice.html">Majice</a></li>
+        <li><a href="oprema.html">Oprema</a></li>
+        <li><a href="hypebeast.html">Hypebeast</a></li>
+        <li><a href="supreme-stores.html">Supreme Trgovine</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="category-banner">
+    <h1>Hypebeast Culture</h1>
+    <p>Kjer se srečata streetwear, sneakers in status</p>
+  </div>
+
+  <section>
+    <h2 class="section-title">Kaj je Hypebeast?</h2>
+    <p style="max-width: 800px; margin-bottom: 2rem; font-size: 1.1rem;">
+      Hypebeast je kultura, ki se osredotoča na limited drops, exclusive collabs in status, ki ga prinaša nošenje redkih kosov. 
+      Nike, Jordan Brand, Supreme, Off-White, Travis Scott in drugi so jedro te kulture. 
+      Gre za lov na graile, early access, resale market in community, ki živi za naslednji drop.
+    </p>
+
+    <div class="product-grid">
+      <div class="product-card" onclick="openZoom(this)">
+        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=600&fit=crop" alt="Hype Tee" class="product-img">
+        <div class="product-info">
+          <h3>Majice (Box Logo & Graphic)</h3>
+          <div class="price">od 40 €</div>
+          <p>Supreme Box Logo, Nike x Off-White, Travis Scott Cactus Jack – status simboli.</p>
+        </div>
+      </div>
+      <div class="product-card" onclick="openZoom(this)">
+        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&h=600&fit=crop" alt="Hoodie" class="product-img">
+        <div class="product-info">
+          <h3>Hoodiji</h3>
+          <div class="price">od 100 €</div>
+          <p>Supreme, Nike Tech, Fear of God Essentials, Stüssy – layering kingi.</p>
+        </div>
+      </div>
+      <div class="product-card" onclick="openZoom(this)">
+        <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600&h=600&fit=crop" alt="Pants" class="product-img">
+        <div class="product-info">
+          <h3>Hlače</h3>
+          <div class="price">od 80 €</div>
+          <p>Cargo, track pants, denim z logo detajli. Fit je vse.</p>
+        </div>
+      </div>
+      <div class="product-card" onclick="openZoom(this)">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&h=600&fit=crop" alt="Sneakers" class="product-img">
+        <div class="product-info">
+          <h3>Superge (Grails)</h3>
+          <div class="price">od 150 €</div>
+          <p>Dunks, AJ1 Chicago, Travis Scott, Off-White, LV x Nike – resale kralji.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #111; color: white; max-width: 100%;">
+    <div style="max-width: 1400px; margin: 0 auto; padding: 0 2rem;">
+      <h2 class="section-title" style="color: white;">Ključni elementi kulture</h2>
+      <div class="feature-list">
+        <div class="feature-item">
+          <h3>Limited Drops</h3>
+          <p>Majhne količine + SNKRS app = kaos in hype.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Collabs</h3>
+          <p>Umetniki + blagovne znamke = kultni kosi.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Resale</h3>
+          <p>StockX, GOAT, Discord – sekundarni trg je del igre.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Community</h3>
+          <p>Instagram, Twitter/X, Discord – vse se dogaja online.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Nike Style Demo</p>
+    <p style="margin-top: 1rem;"><a href="index.html">Domov</a> <a href="supreme-stores.html">Supreme Trgovine</a></p>
+  </footer>
+
+  <div class="modal" id="zoomModal" onclick="closeZoom()">
+    <span class="modal-close">&times;</span>
+    <img id="zoomImg" src="" alt="Zoom">
+  </div>
+  <script>
+    function openZoom(card) {
+      const img = card.querySelector('img');
+      document.getElementById('zoomImg').src = img.src;
+      document.getElementById('zoomModal').classList.add('active');
+    }
+    function closeZoom() {
+      document.getElementById('zoomModal').classList.remove('active');
+    }
+  </script>
+</body>
+</html>
